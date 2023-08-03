@@ -16,6 +16,18 @@ const config = withPlugins([[withBundleAnalyzer({ enabled: env.ANALYZE })]], {
       { source: "/ping", destination: "/api/health" },
     ]
   },
+  images: {
+    domains: ['www.datocms-assets.com'],
+    formats: ['image/avif', 'image/webp']
+  },
+  i18n: {
+    locales: ['fr', 'en'],
+    defaultLocale: 'fr'
+  },
+  env: {
+    NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN:
+    process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN
+  },
 })
 
 export default config
